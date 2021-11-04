@@ -1,0 +1,501 @@
+@import '../fonts/fonts.css';
+
+:root {
+    --body: #fff;
+    --text: #313131;
+    --border: 1px solid #313131;
+    --dropsh: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    --dropbg: #fff;
+    --salesh: 0px 0px 30px rgba(255, 255, 255, 0.459);
+}
+
+
+* {
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--body);
+    font-family: 'Noto';
+}
+
+.nav_top {
+    background-color: #0C0C0C;
+}
+
+.nav_link {
+    font-family: 'Noto';
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    color: #FFFFFF;
+}
+
+.input_search {
+    width: 440px;
+    height: 50px;
+    border: var(--border);
+    box-sizing: border-box;
+    border-radius: unset;
+    font-size: 14px;
+    line-height: 19px;
+    outline: none;
+    font-family: 'Noto';
+}
+
+.button_search {
+    width: 190px;
+    height: 50px;
+    border: var(--border);
+    box-sizing: border-box;
+    outline: none;
+    border-radius: unset;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    background-color: #313131;
+    color: white;
+}
+
+.burger {
+    color: black;
+}
+
+.nav_logo::after {
+    content: url(../img/logo_dark.png);
+    display: block;
+}
+
+.nav_bottom_link {
+    font-family: 'Noto';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--text);
+}
+
+.dropdown_blok {
+    width: 290px;
+    padding-left: 30px;
+    position: relative;
+    background-color: var(--dropbg);
+    box-shadow: var(--dropsh);
+    border: unset;
+    border-radius: 0px;
+}
+
+.dropdown_blok::after {
+    content: '';
+    width: 95%;
+    height: 2px;
+    background-color: var(--body);
+
+}
+
+.dropdown_title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 65px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #313131;
+}
+
+.dropdown_link {
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #313131;
+}
+
+.menu {
+    background-color: black;
+    width: 35px;
+    height: 4px;
+    position: relative;
+}
+
+.menu::after,
+.menu::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    top: 12px;
+    transition: 0.5s;
+}
+
+.menu::before {
+    top: -12px;
+}
+
+.header_title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    margin-bottom: 120px;
+}
+
+.shop_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    border: var(--border);
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.shop_link:hover {
+    color: var(--text);
+}
+
+.carousel-indicators {
+    margin: 0;
+    margin-top: 50px;
+    position: static;
+    column-gap: 15px;
+}
+
+.carusel__img {
+    height: 100%;
+}
+
+.carousel-indicators-dots {
+    background-color: var(--text) !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators-dots.active {
+    background-color: var(--text) !important;
+    transform: scale(1.3);
+}
+
+.sale_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sale_grid_item {
+    background-color: #e3e3e3;
+    min-height: 240px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sale_grid_item:hover {
+    box-shadow: var(--salesh);
+}
+
+.sale_grid_item1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #e3e3e3;
+}
+
+.sale_grid_item2 {
+    grid-column: span 2;
+
+}
+
+.sale_grid-info {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+}
+
+.sale_grid-info2 {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.sale_grid-info,
+.sale_grid-info2 h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #313131;
+}
+
+.sale_grid-info,
+.sale_grid-info2 p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #313131;
+}
+
+.sale_grid_item1::after,
+.sale_grid_item2::after {
+    content: '-57%';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #313131;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 70px;
+    color: #FFFFFF;
+}
+
+.sale_grid_item2::after {
+    content: '-30%';
+}
+
+.sale_grid_item3::after,
+.sale_grid_item4::after {
+    content: '-20%';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #313131;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 70px;
+    color: #FFFFFF;
+}
+
+.sale_grid_item4::after {
+    content: '-10%';
+}
+
+.sale_grid_item img {
+    z-index: -1;
+}
+
+.learn {
+    width: 190px;
+    height: 50px;
+    border: var(--border);
+    color: var(--text);
+    background-color: rgb(32, 31, 31);
+}
+
+.learn:hover {
+    color: var(--text);
+
+}
+
+.title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.cell_item {
+    position: relative;
+    transition: 0.5s;
+    height: 330px;
+    width: 300px;
+
+}
+
+.cell_item::before {
+    content: url(../img/like.png);
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.cell_item:hover .buy {
+    transform: scale(1);
+}
+
+.cell_item:hover::before {
+    transform: scale(1) rotatey(360deg);
+}
+
+
+
+.cell_shadow {
+    width: 300px;
+    height: 35px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.5s;
+}
+
+.cell_item:hover .cell_shadow {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.479) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cell_item h3 {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text);
+}
+
+.cell_item p {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--text);
+}
+
+.cell_item img {
+    z-index: 2;
+    position: relative;
+    width: 250px;
+}
+
+.cell_info {
+    z-index: -1;
+    transform: translateY(-65%);
+}
+
+.buy {
+    margin-top: 15px;
+    background: #313131;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+
+
+.ps5_logo::after {
+    content: url(../img/ps5_light.png);
+
+}
+
+.ps5_title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 65px;
+    color: var(--text);
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.watch_now {
+    width: 190px;
+    height: 50px;
+    border: var(--border);
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--text);
+}
+
+.watch_now:hover {
+    color: var(--text);
+}
+
+.footer {
+    background-color: black;
+    height: 100%;
+}
+
+.input_search_footer {
+    width: 330px;
+    height: 50px;
+    background: #FFFFFF !important;
+    border-radius: unset;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.button_search_footer {
+    width: 190px;
+    height: 50px;
+    border-radius: unset;
+    background: #313131;
+    border: 1px solid #FFFFFF;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.footer_link {
+    font-size: 35px;
+    color: whitesmoke;
+}
+
+.footer_bottom {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.footer_bottom:hover{
+    color: white;
+}
